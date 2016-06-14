@@ -1,0 +1,107 @@
+BODY {
+	background: #505050;
+}
+
+#content {
+	position: relative;
+	display: block;
+	width: 1000px;
+	margin: auto;
+}
+
+#main {
+	position: relative;
+}
+
+#header { position: relative; }
+
+.box {
+	padding: 10px;
+	margin: 15px;
+	border-radius: 5px;
+	background: #909090;
+	-moz-box-shadow: 5px 7px 5px #000;
+	-webkit-box-shadow: 5px 7px 5px #000;
+	-o-box-shadow: 5px 7px 5px #000;
+	box-shadow: 5px 7px 5px #000;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color='#6565', Direction=135, Strength=5);
+}
+
+#logo { height: 100px; }
+#reload {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+#reload IMG { width: 20px; }
+#close {
+	position: absolute;
+	bottom: 0px;
+	right: 6px;
+}
+#close IMG { width: 20px; }
+#loupe {
+	position: absolute;
+	bottom: -20px;
+	right: 40px;
+}
+
+#left {
+	position: absolute;
+	top: -15px;
+	left: 0px;
+	width: 8%;
+}
+#left A:hover { display: block; border: 2px solid red; }
+#right A:hover { display: block; border: 2px solid red; }
+
+#center {
+	position: relative;
+	width: 71%;
+	margin: auto;
+}
+#center IMG { width: 100%; }
+
+#ikea {
+	position: absolute;
+	display: block;
+	width: 100px;
+	height: 160px;
+	bottom: 25px;
+	left: 235px;
+}
+
+#apple {
+	position: absolute;
+	display: block;
+	width: 140px;
+	height: 110px;
+	bottom: 85px;
+	right: 20px;
+}
+
+#right {
+	position: absolute;
+	top: -15px;
+	right: 0px;
+	width: 8%;
+}
+
+.img {
+	display: block;
+	width: 60%;
+	margin: 8px auto 8px auto;
+}
+
+#text_box {
+	line-height: 20px;
+	position: absolute;
+	padding: 10px 10px 45px 10px;
+	background: #88FF89;
+	width: 370px;
+	bottom: -100px;
+	left: -70px;
+}
+
+#text_box .entrez { font-size: 2em; }
+#text_box .ordinateur { text-shadow: 2px 3px 2px red; }

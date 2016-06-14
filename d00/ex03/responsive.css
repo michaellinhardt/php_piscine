@@ -1,0 +1,67 @@
+BODY {
+	padding: 30px;
+	background: #000;
+	color: green;
+	font-size: 2vmin;
+}
+#content {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	padding-top: 100px;
+}
+#dimitri {
+	position: absolute;
+	width: 20%;
+	top: -10px;
+	right: 0px;
+}
+#copyright { text-align: right; }
+#table {
+	width: 100%;
+}
+#table THEAD {
+	color: red;
+}
+#table TD {
+	width: 1px;
+	height: 100%;
+	position: relative;
+	text-align: center;
+	color: white;
+}
+.elem {
+	border: 1px solid black;
+}
+.symbol P {
+	font-weight: bold;
+	margin: 25%;
+	color: black;
+}
+.num {
+	color: black;
+	position: absolute;
+	bottom: -14px;
+	left: 2px;
+	font-size: 1.7vmin;
+}
+.poid {
+	color: black;
+	position: absolute;
+	font-size: 1.5vmin;
+	top: -10px;
+	right: 2px;
+}
+.col-1 { background: #A0FFA0; }
+.col-2 { background: #FF6666; }
+.col-3 { background: #FFDEAD; }
+.col-4 { background: #FFC0C0; }
+.col-5 { background: #CCCC99; }
+.col-6 { background: #FFFF99; }
+.col-7 { background: #C0FFFF; }
+.col-8 { background: #CCCCCC; }
+.col-9 { background: #EEEEEE; }
+.col-10 { background: #FFBFFF; }
+.col-11 { background: #FF99CC; }
