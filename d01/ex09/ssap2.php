@@ -40,7 +40,7 @@ function sort_nocase($sValue1, $sValue2)
 	else if ($i == $iLen1)
 		return (-1);
 	else
-		return 1;
+		return (1);
 }
 unset($argv[0]);
 $aWord = array();
