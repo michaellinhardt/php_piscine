@@ -37,6 +37,6 @@ $aMember = $aMembers[intval($_GET['id'])];
 	</form>
 	<?php
 		if (isset($sMsg))
-			echo '<p>' . $sMsg . '</p>';
+			echo '<p class="msg">' . $sMsg . '</p>';
 	 ?>
 </div>

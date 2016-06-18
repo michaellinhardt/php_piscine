@@ -21,6 +21,15 @@ LABEL {
 	width: 95%;
 }
 
+#form_category INPUT[type=text] {
+	height: 45px;
+	width: 400px;
+}
+
+.form INPUT {
+	margin: 5px;
+}
+
 .form_member INPUT {
 	width: 95%;
 	margin: 5px;

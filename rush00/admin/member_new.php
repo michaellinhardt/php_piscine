@@ -29,6 +29,6 @@ if (isset($_POST['submit']))
 	</form>
 	<?php
 		if (isset($sMsg))
-			echo '<p>' . $sMsg . '</p>';
+			echo '<p class="msg">' . $sMsg . '</p>';
 	 ?>
 </div>
