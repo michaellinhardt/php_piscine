@@ -9,4 +9,8 @@ function redirect( $sWhy )
 		$sWhy = "unknow" ;
 	exitx(1, $aPage[$sWhy]);
 }
+function redirectHtml( $sLocation )
+{
+	echo '<script type="text/javascript">window.location.href = "'.$sLocation.'"</script>';
+}
 ?>

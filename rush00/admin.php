@@ -10,6 +10,7 @@ include './layout/admin_header.php';
 
 $aPage['product'] = './admin/product.php';
 $aPage['member'] = './admin/member.php';
+$aPage['member_new'] = './admin/member_new.php';
 $aPage['category'] = './admin/category.php';
 if (!isset($aPage[$p]))
 	redirect("admin_bad_page");

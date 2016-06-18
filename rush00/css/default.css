@@ -5,6 +5,9 @@ BODY {
 	color: grey;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 }
+LABEL {
+	display: block;
+}
 
 .nav-menu, .nav-menu LI {
 	margin: 0px;
@@ -14,6 +17,11 @@ BODY {
 }
 
 #main {
-	margin: 70px auto 0px auto;
+	margin: 65px auto 0px auto;
 	width: 95%;
+}
+
+#form_member_new INPUT {
+	width: 95%;
+	margin: 5px;
 }
