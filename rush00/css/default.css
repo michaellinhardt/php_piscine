@@ -21,7 +21,16 @@ LABEL {
 	width: 95%;
 }
 
-#form_member_new INPUT {
+.form_member INPUT {
 	width: 95%;
 	margin: 5px;
+}
+
+.form_member SELECT {
+	width: 95%;
+	margin: 5px;
+}
+
+.table .small {
+	width: 1px;
 }

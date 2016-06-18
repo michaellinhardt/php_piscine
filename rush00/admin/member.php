@@ -10,19 +10,22 @@ $aMembers = $aData['members'];
 	<table class="table">
 		<thead>
 			<tr>
-				<th>ID</th>
+				<th class='small'>ID</th>
 				<th>Login</th>
 				<th>Password</th>
 				<th>Mail</th>
-				<th>&nbsp;</th>
-				<th>&nbsp;</th>
+				<th>Admin</th>
+				<th class='small'>&nbsp;</th>
+				<th class='small'>&nbsp;</th>
 			</tr>
 		</thead>
 			<?php
 			foreach( $aMembers as $iID => $aMember )
 			{
 				$sDel = '<a href="./admin.php?p=member&d='.$iID.'">  ❌ </a>';
-				echo "<tr><td>".$iID."</td><td>".$aMember['login']."</td><td> *** </td><td>".$aMember['mail']."</td><td> 🗒 </td><td>".$sDel."</td></tr>";
+				$sMod = '<a href="./admin.php?p=member_mod&id='.$iID.'">  📝 </a>';
+				$sAdmin = ($aMember['admin'] == 1) ? 'Oui' : 'Non';
+				echo "<tr><td>".$iID."</td><td>".$aMember['login']."</td><td> *** </td><td>".$aMember['mail']."</td><td>".$sAdmin."</td><td>".$sMod."</td><td>".$sDel."</td></tr>";
 			}
 			?>
 		<tbody>
