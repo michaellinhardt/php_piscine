@@ -8,10 +8,23 @@ if (isset($_POST['add_cat']))
 	else if (isCat($aCat, $_POST['name']))
 		$sMsg .= "Cette catégorie existe déjà..";
 	else if (!($aData = addCat($aData, $_POST['name'])))
-		$sMsg = "Problème durant l'ajout de la catégorie..";
+		$sMsg .= "Problème durant l'ajout de la catégorie..";
 	else
 	{
-		$sMsg = "Ajouté avec succès.";
+		$sMsg .= "Ajouté avec succès.";
+		$aCat = $aData['category'];
+	}
+}
+if (isset($_GET['d']))
+{
+	$sMsg2 = "Suppression catégorie: ";
+	if (!is_numeric($_GET['d']) || !isset($aCat[intval($_GET['d'])]))
+		$sMsg2 .= "Impossible de supprimer la catégorie ?!";
+	else if (!($aData = delCat($aData, intval($_GET['d']))))
+		$sMsg .= "Problème durant la suppression..";
+	else
+	{
+		$sMsg2 .= "Supprimé avec succès.";
 		$aCat = $aData['category'];
 	}
 }
@@ -23,7 +36,9 @@ if (isset($_POST['add_cat']))
 		<input type="text" size="50" name="name" id="name" value="" placeholder="Nom de la nouvelle catégorie" />
 	</form>
 	<?php if (isset($sMsg))
-			echo '<p class="msg">' . $sMsg . '</p>'; ?>
+			echo '<p class="msg">' . $sMsg . '</p>';
+		if (isset($sMsg2))
+				echo '<p class="msg">' . $sMsg2 . '</p>'; ?>
 	<table class="table">
 		<thead>
 			<tr>
