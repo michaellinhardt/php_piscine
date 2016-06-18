@@ -2,6 +2,7 @@ BODY {
 	position: relative;
 	margin: 0px;
 	padding: 0px;
+	color: grey;
 }
 
 .nav-menu, .nav-menu LI {
@@ -12,7 +13,6 @@ BODY {
 }
 
 #main {
-	margin: 80px auto 0px auto;
+	margin: 70px auto 0px auto;
 	width: 95%;
-	border: 1px solid black;
 }

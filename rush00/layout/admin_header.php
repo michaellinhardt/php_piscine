@@ -8,9 +8,11 @@
 	<body>
 		<div id="header">
 			<div class="nav-bar">
-				<a class="btn btn-m btn-black" href="./index.php">🏠 <?= $aData['settings']['site_title']; ?></a>
+				<a class="btn btn-s btn-black" href="./index.php">🏠 <?= $aData['settings']['site_title']; ?></a>
 				<ul class="nav-menu">
-					<li><a class="btn btn-m btn-grey <?php btnactive( $p, 'product', 'btn-grey') ?>" href="./admin.php?p=product">👜 Product</a></li>
+					<li><a class="btn btn-s btn-grey <?php btnactive( $p, 'member', 'btn-grey') ?>" href="./admin.php?p=member">👬 Membres</a></li>
+					<li><a class="btn btn-s btn-grey <?php btnactive( $p, 'product', 'btn-grey') ?>" href="./admin.php?p=product">👜 Produits</a></li>
+					<li><a class="btn btn-s btn-grey <?php btnactive( $p, 'category', 'btn-grey') ?>" href="./admin.php?p=category">📖 Catégorie</a></li>
 				</ul>
 			</div>
 		</div>

@@ -4,9 +4,10 @@
 	margin: 0px;
 	padding: 5px;
 	top: 0px;
-	height: 55px;
+	height: 47px;
 	width: 100%;
-	background-image:linear-gradient(black, white);
+	background-image: linear-gradient(to bottom, #3c3c3c 25px, #222 100%);
+	background-repeat: repeat-x;
 	color: #000;
 }
 
@@ -60,6 +61,7 @@
 }
 .btn-black:hover,.btn-black:focus{background-color:#444}
 .btn-black{background-color:#000}
+
 .btn-grey:link,.btn-grey:visited{
 background-color:#555;color:#eee
 }
@@ -68,4 +70,31 @@ background-color:#333;border-color:#333;color:#eee
 }
 .btn-grey-active{
 background-color:#777;border-color:#777;color:#eee
+}
+
+.page_title {
+	display: block;
+	margin: auto;
+	width: 100%;
+	line-height: 40px;
+	height: 40px;
+	padding-left: 10px;
+	font-weight: bold;
+	letter-spacing: .1em;
+	background-image: linear-gradient(to bottom, #fff 0px, #f0f0f0 100%);
+	background-repeat: repeat-x;
+	border-radius: 7px;
+	box-shadow: 1px 5px 1px rgba(255, 255, 255, 0.15) inset, 0 1px 5px rgba(0, 0, 0, 0.075);
+}
+
+.page {
+	display: block;
+	width: 95%;
+	margin: 20px auto 0px auto;
+	padding: 5px;
+	padding-left: 20px;
+	background-image: linear-gradient(to bottom, #fff 0px, #f8f8f8 100%);
+	background-repeat: repeat-x;
+	border-radius: 7px;
+	box-shadow: 1px 5px 1px rgba(255, 255, 255, 0.15) inset, 0 1px 5px rgba(0, 0, 0, 0.075);
 }
