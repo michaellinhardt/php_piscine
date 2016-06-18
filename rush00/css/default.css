@@ -3,6 +3,7 @@ BODY {
 	margin: 0px;
 	padding: 0px;
 	color: grey;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 }
 
 .nav-menu, .nav-menu LI {

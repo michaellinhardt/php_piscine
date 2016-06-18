@@ -98,3 +98,35 @@ background-color:#777;border-color:#777;color:#eee
 	border-radius: 7px;
 	box-shadow: 1px 5px 1px rgba(255, 255, 255, 0.15) inset, 0 1px 5px rgba(0, 0, 0, 0.075);
 }
+
+
+.table
+{
+	font-size: 12px;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+.table th
+{
+	font-size: 1.1em;
+	font-weight: normal;
+	padding: 8px;
+	background: #555555;
+	border-top: 4px solid #3A3A3A;
+	border-bottom: 1px solid #fff;
+	color: #FFF;
+}
+.table td
+{
+	padding: 8px;
+	background: #F0F0F0;
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+}
+.table tr:hover td
+{
+	background: #DEDEDE;
+	color: #339;
+}
