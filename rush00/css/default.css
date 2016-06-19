@@ -21,9 +21,10 @@ LABEL {
 	width: 95%;
 }
 
-#form_category INPUT[type=text] {
+.form2 INPUT[type=text] {
 	height: 45px;
 	width: 400px;
+	font-size: 14px;
 }
 
 .form INPUT {

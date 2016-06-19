@@ -14,6 +14,13 @@ function addCat($aData, $sName)
 	return $aData;
 }
 
+function modCat($aData, $iID, $sName)
+{
+	$aData['category'][$iID] = $sName;
+	saveData($aData);
+	return $aData;
+}
+
 function delCat( $aData, $iID )
 {
 	unset($aData['category'][$iID]);
