@@ -102,3 +102,7 @@ LABEL {
 	clear: both;
 	display: none;
 }
+
+.cat {
+	margin: 10px 0 0 0;
+}

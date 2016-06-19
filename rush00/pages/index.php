@@ -1,10 +1,17 @@
 <?php
 $aProducts = $aData['product'];
+$cat = (isset($_GET['cat']) && (isset($aData['category'][intval($_GET['cat'])]))) ? intval($_GET['cat']) : NULL;
 ?>
 <div class="page_title">Liste des produits</div>
+<p class="cat">Catégorie: <a href="./index.php">Aucune!</a>&nbsp;&nbsp;
+<?php foreach( $aData['category'] as $iID => $sCat ) { ?>
+	<a href="./index.php?cat=<?= $iID ?>"><?= $sCat ?></a>,&nbsp;
+<?php } ?>
+</p>
 <div id="product_content">
 	<div id="product_list">
-	<?php foreach( $aProducts as $iID => $aProduct ) { ?>
+	<?php foreach( $aProducts as $iID => $aProduct )
+	 	if ((isset($cat) && isset($aProduct['cat'][$cat])) || !isset($cat)) { ?>
 		<div class="product">
 			<div class="product_center">
 				<p class="title"><?= $aProduct['name'] ?></p>
