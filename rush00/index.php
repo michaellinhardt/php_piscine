@@ -24,6 +24,7 @@ if (!isset($_SESSION['panier']))
 
 $p = (!isset($_GET['p'])) ? 'index' : $_GET['p'];
 $aPage['index'] = './pages/index.php';
+$aPage['inscription'] = './pages/inscription.php';
 if (!isset($aPage[$p]))
 	$p = 'index' ;
 

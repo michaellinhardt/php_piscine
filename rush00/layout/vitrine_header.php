@@ -24,7 +24,7 @@
 						<input type="text" size="15" name="login" id="login" placeholder="Login" />
 						<input type="password" size="15" name="passwd" id="passwd" placeholder="Password" />
 						<input type="submit" name="submit" id="submit" class="btn btn-s btn-grey" value="Connexion" />
-						<a class="btn btn-s btn-grey" href="./inscription.php">Inscription</a>
+						<a class="btn btn-s btn-grey" href="./index.php?p=inscription">Inscription</a>
 					</form>
 				<?php } ?>
 				</div>
