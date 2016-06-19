@@ -3,6 +3,22 @@ session_start();
 include './functions.php';
 $aData = getData();
 
+if (isset($_GET['deco']))
+{
+	$_SESSION['id_members'] = -1;
+	if (isset($_SESSION['panier']))
+		$_SESSION['panier']['owned'] = -1;
+}
+
+if (isset($_POST['submit']))
+{
+	if (($_POST['login'] = trim($_POST['login'])) != ""
+	&& ($_POST['passwd'] = trim($_POST['passwd'])) != "")
+		auth($aData, $_POST['login'], $_POST['passwd']);
+	else
+		$_SESSION['id_members'] = -1;
+}
+
 if (!isset($_SESSION['panier']))
 	$_SESSION['panier'] = newPanier();
 

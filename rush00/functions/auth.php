@@ -1,6 +1,7 @@
 <?php
-function auth( $aMembers, $sLogin, $sPasswd )
+function auth( $aData, $sLogin, $sPasswd )
 {
+	$aMembers = $aData['members'];
 	$sPasswd = hash('whirlpool', $sPasswd);
 	foreach ( $aMembers as $iID => $aMember )
 		if ( $aMember['login'] == $sLogin && $aMember['passwd'] == $sPasswd)

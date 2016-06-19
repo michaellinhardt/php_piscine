@@ -31,8 +31,8 @@ if (isset($_GET['del']) && isset($aProducts[(intval($_GET['del']))]))
 				<p class="qte">Prix: <?= $aProduct['prix'] ?></p>
 				<p class="description"><?= $aProduct['description'] ?></p>
 				<div class="product_btn">
-					<a class="btn btn-s" href="./index.php?add=<?= $iID . $catlink ?>" class="product_add" />&nbsp;&nbsp;&nbsp;➕&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
-					<a class="btn btn-s" href="./index.php?del=<?= $iID . $catlink ?>" class="product_del" />&nbsp;&nbsp;&nbsp;➖&nbsp;&nbsp;&nbsp;</a>
+					<a class="btn btn-s" href="./index.php?add=<?= $iID . $catlink ?>" class="product_add">&nbsp;&nbsp;&nbsp;➕&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;
+					<a class="btn btn-s" href="./index.php?del=<?= $iID . $catlink ?>" class="product_del">&nbsp;&nbsp;&nbsp;➖&nbsp;&nbsp;&nbsp;</a>
 				</div>
 			</div>
 		</div>
@@ -59,8 +59,8 @@ if (isset($_GET['del']) && isset($aProducts[(intval($_GET['del']))]))
 				{
 					$aItem = $aData['product'][$iID];
 					$sImg = '<img src="'.$aItem['pics_cart'].'" />';
-					$sMore ='<a class="btn btn-s" href="./index.php?add='.$iID.$catlink.'" class="product_add" />&nbsp;➕&nbsp;</a>';
-					$sLess ='<a class="btn btn-s" href="./index.php?del='.$iID.$catlink.'" class="product_del" />&nbsp;➖&nbsp;</a>';
+					$sMore ='<a class="btn btn-s" href="./index.php?add='.$iID.$catlink.'" class="product_add">&nbsp;➕&nbsp;</a>';
+					$sLess ='<a class="btn btn-s" href="./index.php?del='.$iID.$catlink.'" class="product_del">&nbsp;➖&nbsp;</a>';
 					echo "<td>".$sImg."</td><td>".$iQte."</td><td>".$aItem['name']."</td><td>".$aItem['prix']."</td><td>".$sMore."</td><td>".$sLess."</td></tr>";
 				}
 				?>

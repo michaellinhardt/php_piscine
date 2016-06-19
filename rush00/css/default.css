@@ -106,3 +106,25 @@ LABEL {
 .cat {
 	margin: 10px 0 0 0;
 }
+
+.log_div {
+	margin: 0px 10px 0 0;
+	line-height: 33px;
+	padding: 0px;
+	display: inline;
+	float: right;
+	height: 100%;
+}
+
+.log_div A {
+	height: 15px;
+	line-height: 15px;
+}
+#form_connexion {
+	margin-top: 2px;
+}
+
+#form_connexion INPUT {
+	height: 32px;
+	padding: 3px;
+}

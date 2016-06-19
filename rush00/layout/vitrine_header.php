@@ -16,6 +16,18 @@
 					?>
 					<li><a class="btn btn-s btn-grey <?php btnactive( $p, 'index', 'btn-grey') ?>" href="./index.php">🎁 Produit</a></li>
 				</ul>
+				<div class="log_div">
+				<?php if ($_SESSION['id_members'] != -1) { ?>
+					<a class="btn btn-s btn-grey" href="./index.php?deco=1">❌ Déconnection</a>
+				<?php } else { ?>
+					<form id="form_connexion" method="post" action="./index.php">
+						<input type="text" size="15" name="login" id="login" placeholder="Login" />
+						<input type="password" size="15" name="passwd" id="passwd" placeholder="Password" />
+						<input type="submit" name="submit" id="submit" class="btn btn-s btn-grey" value="Connexion" />
+						<a class="btn btn-s btn-grey" href="./inscription.php">Inscription</a>
+					</form>
+				<?php } ?>
+				</div>
 			</div>
 		</div>
 		<div id="main">
