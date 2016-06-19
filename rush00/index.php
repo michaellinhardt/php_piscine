@@ -3,6 +3,9 @@ session_start();
 include './functions.php';
 $aData = getData();
 
+if (!isset($_SESSION['panier']))
+	$_SESSION['panier'] = newPanier();
+
 $p = (!isset($_GET['p'])) ? 'index' : $_GET['p'];
 $aPage['index'] = './pages/index.php';
 if (!isset($aPage[$p]))
