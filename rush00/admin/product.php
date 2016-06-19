@@ -14,6 +14,7 @@ $aProducts = $aData['product'];
 				<th class='small'>Stock</th>
 				<th>Name</th>
 				<th>Description</th>
+				<th>Catégorie</th>
 				<th class='small'>&nbsp;</th>
 				<th class='small'>&nbsp;</th>
 				<th class='small'>&nbsp;</th>
@@ -25,8 +26,11 @@ $aProducts = $aData['product'];
 				$sDel = '<a href="./admin.php?p=product&d='.$iID.'">  ❌ </a>';
 				$sMod = '<a href="./admin.php?p=product_mod&id='.$iID.'">  📝 </a>';
 				$sCat = '<a href="./admin.php?p=product_cat&id='.$iID.'">  👜 </a>';
-				echo "<tr><td>".$iID."</td><td><img src='".$aProduct['pics_cart']."' /></td><td>".$aProduct['stock']."</td>";;
-				echo "<td>".$aProduct['name']."</td><td>".$aProduct['description']."</td><td>".$sCat."</td><td>".$sMod."</td><td>".$sDel."</td></tr>";
+				$sCatList = '';
+				foreach( $aProduct['cat'] as $iIDCat => $sName )
+					$sCatList .= $aData['category'][$iIDCat] . ', ';
+				echo "<tr><td>".$iID."</td><td><img src='".$aProduct['pics_cart']."' /></td><td>".$aProduct['stock']."</td><td>".$aProduct['name']."</td>";
+				echo "<td>".$aProduct['description']."</td><td>".$sCatList."</td><td>".$sCat."</td><td>".$sMod."</td><td>".$sDel."</td></tr>";
 			}
 			?>
 		<tbody>
