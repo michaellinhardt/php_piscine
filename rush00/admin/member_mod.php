@@ -4,6 +4,8 @@ if (!isset($_GET['id']) || !isset($aMembers[intval($_GET['id'])]) || !is_numeric
 	redirectHtml("./admin.php?p=member");
 if (isset($_POST['submit']))
 {
+	if (intval($_GET['id']) == 0)
+		$_POST['admin'] = 1;
 	if ($_POST['passwd'] == "")
 		$_POST['passwd'] = NULL;
 	if ($_POST['login'] == "" || $_POST['mail'] == "")
