@@ -9,6 +9,8 @@ if (isset($_POST['submit']))
 	if (($_POST['name'] = trim($_POST['name'])) == "" || ($_POST['description'] = trim($_POST['description'])) == ""
 	|| !is_numeric($_POST['stock']) || !isset($_FILES['pics']))
 		$sMsg = "Tous les champs doivent être remplis et valide..";
+	else if ($aExt[1] != 'jpeg')
+		$sMsg = "Fichier Jpeg uniquement pour les images..";
 	else if (isProduct($aProducts, $_POST['name']))
 		$sMsg = "Ce produit existe déjà..";
 	else if (!(move_uploaded_file($_FILES['pics']['tmp_name'], $sFile)))
