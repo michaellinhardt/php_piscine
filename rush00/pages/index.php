@@ -42,9 +42,35 @@ if (isset($_GET['del']) && isset($aProducts[(intval($_GET['del']))]))
 		<div class="page_title">Votre panier</div><br />
 		<?php if (count($_SESSION['panier']['list']) == 0)
 			echo 'Panier vide..';
-		else {
-			var_dump($_SESSION['panier']['list']);
-		}?>
+		else { ?>
+
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th class='small'>Img</th>
+					<th class='small'>Qte</th>
+					<th>Name</th>
+					<th>Prix</th>
+					<th class='small'>&nbsp;</th>
+					<th class='small'>&nbsp;</th>
+				</tr>
+			</thead>
+				<?php
+				foreach( $_SESSION['panier']['list'] as $iID => $iQte )
+				{
+					$aItem = $aData['product'][$iID];
+					$sImg = '<img src="'.$aItem['pics_cart'].'" />';
+					$sMore ='<a class="btn btn-s" href="./index.php?add='.$iID.$catlink.'" class="product_add" />&nbsp;➕&nbsp;</a>';
+					$sLess ='<a class="btn btn-s" href="./index.php?del='.$iID.$catlink.'" class="product_del" />&nbsp;➖&nbsp;</a>';
+					echo "<td>".$sImg."</td><td>".$iQte."</td><td>".$aItem['name']."</td><td>".$aItem['prix']."</td><td>".$sMore."</td><td>".$sLess."</td></tr>";
+				}
+				?>
+			<tbody>
+			</tbody>
+		</table>
+		<p>Cout total: <?= $_SESSION['panier']['total'] ?>e</p>
+		<?php }?>
 	</div>
 	<hr class="clear" />
 </div>
