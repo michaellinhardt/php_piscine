@@ -133,3 +133,9 @@ LABEL {
 	width: 100%;
 	text-align: center;
 }
+
+.cat { margin-bottom: -20px; }
+
+.cat A {
+	font-size: .6em;
+}

@@ -16,9 +16,9 @@ if (isset($_GET['close']) && count($_SESSION['panier']['list']) > 0)
 	$aData = closePanier($aData);
 ?>
 <div class="page_title">Liste des produits</div>
-<p class="cat">Catégorie: <a href="./index.php">Aucune!</a>&nbsp;&nbsp;
+<p class="cat"><a class="btn btn-blue" href="./index.php">Aucune!</a>
 <?php foreach( $aData['category'] as $iID => $sCat ) { ?>
-	<a href="./index.php?cat=<?= $iID ?>"><?= $sCat ?></a>,&nbsp;
+	<a class="btn btn-s btn-blue" href="./index.php?cat=<?= $iID ?>"><?= $sCat ?></a>
 <?php } ?>
 </p>
 <div id="product_content">

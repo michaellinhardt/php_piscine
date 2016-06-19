@@ -38,6 +38,7 @@ function delPanier($aData, $iID)
 
 function closePanier($aData)
 {
+	$_SESSION['panier']['date'] = date("d.m.Y");
 	$aData['panier'][] = $_SESSION['panier'];
 	$_SESSION['panier'] = newPanier();
 	saveData($aData);

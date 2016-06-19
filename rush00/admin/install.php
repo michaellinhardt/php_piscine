@@ -34,6 +34,7 @@ if (isset($_POST['submit']))
 		$sMsg = "Les deux password ne correspondent pas..";
 	else
 	{
+		$_SESSION['panier'] = newPanier();
 		$passwd = hash('whirlpool', $_POST['passwd']);
 		$aData['members'][0] = array( "login" => $_POST['login'], "passwd" => $passwd, "mail" => $_POST['mail'], "admin" => 1);
 		$aData['settings']['site_title'] = $_POST['title'];

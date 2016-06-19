@@ -7,7 +7,8 @@ $aCarts = $aData['panier'];
 		<thead>
 			<tr>
 				<th class='small'>ID</th>
-				<th class='small'>Nombre d'article</th>
+				<th class='small'>Validation</th>
+				<th>Nombre d'article</th>
 				<th>Prix total</th>
 				<th>Propriétaire</th>
 				<th class='small'>&nbsp;</th>
@@ -22,7 +23,7 @@ $aCarts = $aData['panier'];
 			$iNb = 0;
 			foreach( $aCart['list'] as $iQte )
 				$iNb += $iQte;
-			echo '<tr><td>'.$iID.'</td><td>'.$iNb.'</td><td>'.$iPrice.'</td><td>'.$sOwner.'</td><td>'.$sView.'</td></tr>';
+			echo '<tr><td>'.$iID.'</td><td>'.$aCart['date'].'</td><td>'.$iNb.'</td><td>'.$iPrice.'</td><td>'.$sOwner.'</td><td>'.$sView.'</td></tr>';
 		} ?>
 		</tbody>
 	</table>
