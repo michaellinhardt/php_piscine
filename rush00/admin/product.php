@@ -1,4 +1,6 @@
 <?php
+if (isset($_GET['d']) && is_numeric($_GET['d']) && isset($aData['product'][intval($_GET['d'])]))
+	$aData = delProduct( $aData, intval($_GET['d']) );
 $aProducts = $aData['product'];
 ?>
 <div class="page_title">Liste des produits</div>

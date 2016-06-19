@@ -27,10 +27,14 @@ function isProduct( $aProducts, $sName )
 	return FALSE;
 }
 
-// function delProduct( $aData, $iID )
-// {
-// 	unset($aData['members'][$iID]);
-// 	saveData($aData);
-// 	return $aData;
-// }
+function delProduct( $aData, $iID )
+{
+	$aProduct = $aData['product'][$iID];
+	unlink($aProduct['pics']);
+	unlink($aProduct['pics_crop']);
+	unlink($aProduct['pics_cart']);
+	unset($aData['product'][$iID]);
+	saveData($aData);
+	return $aData;
+}
 ?>
