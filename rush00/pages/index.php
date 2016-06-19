@@ -43,8 +43,6 @@ if (isset($_GET['del']) && isset($aProducts[(intval($_GET['del']))]))
 		<?php if (count($_SESSION['panier']['list']) == 0)
 			echo 'Panier vide..';
 		else { ?>
-
-
 		<table class="table">
 			<thead>
 				<tr>
