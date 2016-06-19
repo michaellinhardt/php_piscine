@@ -5,19 +5,20 @@ function addProduct($aData, $aNewProduct)
 	saveData($aData);
 	return $aData;
 }
-//
-// function modProduct($aData, $iID, $sLogin, $sPassword, $sMail, $iAdmin)
-// {
-// 	if (!isset($aData['members'][$iID]))
-// 		return FALSE;
-// 	if (!$sPassword)
-// 		$sPassword = $aData['members'][$iID]['passwd'];
-// 	else
-// 		$sPassword = hash("whirlpool", $sPassword);
-// 	$aData['members'][$iID] = array( "login" => $sLogin, "passwd" => $sPassword, "mail" => $sMail, "admin" => $iAdmin);
-// 	saveData($aData);
-// 	return $aData;
-// }
+
+function addCatProduct($aData, $iIDProduct, $iIDCat)
+{
+	$aData['product'][$iIDProduct]['cat'][$iIDCat] = $aData['category'][$iIDCat];
+	saveData($aData);
+	return $aData;
+}
+
+function delCatProduct($aData, $iIDProduct, $iIDCat)
+{
+	unset($aData['product'][$iIDProduct]['cat'][$iIDCat]);
+	saveData($aData);
+	return $aData;
+}
 
 function isProduct( $aProducts, $sName )
 {
