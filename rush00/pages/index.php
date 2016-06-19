@@ -7,6 +7,11 @@ if (isset($_GET['add']) && isset($aProducts[(intval($_GET['add']))]))
 	$aData = addPanier($aData, intval($_GET['add']));
 	$aProducts = $aData['product'];
 }
+if (isset($_GET['del']) && isset($aProducts[(intval($_GET['del']))]))
+{
+	$aData = delPanier($aData, intval($_GET['del']));
+	$aProducts = $aData['product'];
+}
 ?>
 <div class="page_title">Liste des produits</div>
 <p class="cat">Catégorie: <a href="./index.php">Aucune!</a>&nbsp;&nbsp;

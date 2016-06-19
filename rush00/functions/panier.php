@@ -21,4 +21,18 @@ function addPanier($aData, $iID)
 	saveData($aData);
 	return $aData;
 }
+
+function delPanier($aData, $iID)
+{
+	if (!isset($_SESSION['panier']['list'][$iID])
+	 	|| $_SESSION['panier']['list'][$iID] == 0)
+		return $aData;
+	$aData['product'][$iID]['stock']++;
+	$_SESSION['panier']['total'] -= $aData['product'][$iID]['prix'];
+	$_SESSION['panier']['list'][$iID]--;
+	if ($_SESSION['panier']['list'][$iID] == 0)
+		unset($_SESSION['panier']['list'][$iID]);
+	saveData($aData);
+	return $aData;
+}
 ?>
