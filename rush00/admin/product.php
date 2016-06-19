@@ -13,6 +13,7 @@ $aProducts = $aData['product'];
 				<th class='small'>Img</th>
 				<th class='small'>Stock</th>
 				<th>Name</th>
+				<th>Prix</th>
 				<th>Description</th>
 				<th>Catégorie</th>
 				<th class='small'>&nbsp;</th>
@@ -30,7 +31,7 @@ $aProducts = $aData['product'];
 				foreach( $aProduct['cat'] as $iIDCat => $sName )
 					$sCatList .= $aData['category'][$iIDCat] . ', ';
 				echo "<tr><td>".$iID."</td><td><img src='".$aProduct['pics_cart']."' /></td><td>".$aProduct['stock']."</td><td>".$aProduct['name']."</td>";
-				echo "<td>".$aProduct['description']."</td><td>".$sCatList."</td><td>".$sCat."</td><td>".$sMod."</td><td>".$sDel."</td></tr>";
+				echo "<td>".$aProduct['prix']."</td><td>".$aProduct['description']."</td><td>".$sCatList."</td><td>".$sCat."</td><td>".$sMod."</td><td>".$sDel."</td></tr>";
 			}
 			?>
 		<tbody>

@@ -17,6 +17,7 @@ $cat = (isset($_GET['cat']) && (isset($aData['category'][intval($_GET['cat'])]))
 				<p class="title"><?= $aProduct['name'] ?></p>
 				<img src="<?= $aProduct['pics_crop'] ?>" />
 				<p class="qte">Qte: <?= $aProduct['stock'] ?></p>
+				<p class="qte">Prix: <?= $aProduct['prix'] ?></p>
 				<p class="description"><?= $aProduct['description'] ?></p>
 				<div class="product_btn">
 					<a class="btn btn-s" href="./index.php?add=<?= $iID ?>" class="product_add" />&nbsp;&nbsp;&nbsp;➕&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;

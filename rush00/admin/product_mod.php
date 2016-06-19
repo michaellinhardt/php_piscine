@@ -16,7 +16,7 @@ if (isset($_POST['submit']))
 		$sFile = $sFolder . $sRef . '.' . $aExt[1];
 	}
 	if (($_POST['name'] = trim($_POST['name'])) == "" || ($_POST['description'] = trim($_POST['description'])) == ""
-	|| !is_numeric($_POST['stock']))
+	|| !is_numeric($_POST['stock']) || !is_numeric($_POST['prix']))
 		$sMsg = "Vous devez remplir tout les champs..";
 	else if ($aExt[1] != 'jpeg')
 		$sMsg = "Fichier Jpeg uniquement pour les images..";
@@ -44,6 +44,7 @@ if (isset($_POST['submit']))
 		$aData['product'][intval($_GET['id'])]['name'] = $_POST['name'];
 		$aData['product'][intval($_GET['id'])]['description'] = $_POST['description'];
 		$aData['product'][intval($_GET['id'])]['stock'] = intval($_POST['stock']);
+		$aData['product'][intval($_GET['id'])]['prix'] = intval($_POST['prix']);
 		saveData($aData);
 		$aProducts = $aData['product'];
 		$aProduct = $aProducts[intval($_GET['id'])];
@@ -59,6 +60,8 @@ if (isset($_POST['submit']))
 		<input type="text" size="20" name="name" id="name" required value="<?= $aProduct['name']; ?>" /><br />
 		<label>Description</label>
 		<input type="text" size="20" name="description" id="description" required value="<?= $aProduct['description']; ?>" /><br />
+		<label>Prix</label>
+		<input type="text" size="20" name="prix" id="prix" required value="<?= $aProduct['prix']; ?>" /><br />
 		<label>Stock</label>
 		<input type="text" size="20" name="stock" id="stock" required value="<?= $aProduct['stock']; ?>" /><br />
 		<label>Image</label>
