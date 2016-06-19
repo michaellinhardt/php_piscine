@@ -1,6 +1,8 @@
 <?php
 session_start();
 include './functions.php';
+if (!is_file("./install_lock"))
+	redirectHtml("./install.php");
 $aData = getData();
 
 if (isset($_GET['deco']))
