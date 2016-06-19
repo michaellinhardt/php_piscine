@@ -28,6 +28,14 @@ function isProduct( $aProducts, $sName )
 	return FALSE;
 }
 
+function isProduct2( $aProducts, $iIDProduct, $sName )
+{
+	foreach( $aProducts as $iID => $aProduct )
+		if ($aProduct['name'] == $sName && $iID != $iIDProduct)
+			return TRUE;
+	return FALSE;
+}
+
 function delProduct( $aData, $iID )
 {
 	$aProduct = $aData['product'][$iID];
