@@ -128,3 +128,8 @@ LABEL {
 	height: 32px;
 	padding: 3px;
 }
+
+.panier_close {
+	width: 100%;
+	text-align: center;
+}

@@ -12,6 +12,8 @@ if (isset($_GET['del']) && isset($aProducts[(intval($_GET['del']))]))
 	$aData = delPanier($aData, intval($_GET['del']));
 	$aProducts = $aData['product'];
 }
+if (isset($_GET['close']) && count($_SESSION['panier']['list']) > 0)
+	$aData = closePanier($aData);
 ?>
 <div class="page_title">Liste des produits</div>
 <p class="cat">Catégorie: <a href="./index.php">Aucune!</a>&nbsp;&nbsp;
@@ -68,7 +70,9 @@ if (isset($_GET['del']) && isset($aProducts[(intval($_GET['del']))]))
 			</tbody>
 		</table>
 		<p>Cout total: <?= $_SESSION['panier']['total'] ?>e</p>
-		<?php }?>
+		<?php } if (count($_SESSION['panier']['list']) > 0 && $_SESSION['id_members'] > -1) { ?>
+			<a class="btn btn-s btn-blue panier_close" href="./index.php?close=1">Valider le panier</a>
+		<?php } ?>
 	</div>
 	<hr class="clear" />
 </div>

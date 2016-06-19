@@ -35,4 +35,12 @@ function delPanier($aData, $iID)
 	saveData($aData);
 	return $aData;
 }
+
+function closePanier($aData)
+{
+	$aData['panier'][] = $_SESSION['panier'];
+	$_SESSION['panier'] = newPanier();
+	saveData($aData);
+	return $aData;
+}
 ?>

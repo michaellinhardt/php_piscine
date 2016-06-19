@@ -7,6 +7,7 @@ $aData['members'][] = array( "login" => "admin", "passwd" => $passwd, "mail" => 
 
 $aData['category'] = array();
 $aData['product'] = array();
+$aData['panier'] = array();
 
 $aData['settings'] = array();
 $aData['settings']['path_data'] = './data';
