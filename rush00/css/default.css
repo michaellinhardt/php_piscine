@@ -44,3 +44,61 @@ LABEL {
 .table .small {
 	width: 1px;
 }
+
+#product_content {
+	position: relative;
+	width: 100%;
+}
+
+#product_list {
+	position: relative;
+	float: left;
+	width: 70%;
+	margin-top: 20px;
+}
+
+.product {
+	float: left;
+	position: relative;
+	width: 250px;
+	padding: 5px;
+	margin: 10px;
+}
+
+.product_center {
+	margin: auto;
+}
+
+.product_center P {
+	font-size: .9em;
+	margin: 0;
+	padding: 0;
+}
+
+.product_center .title {
+	font-size: 1em;
+}
+
+.product_center IMG {
+	display: block;
+	margin: 5px auto 5px auto;
+	padding: 0;
+}
+
+.product_btn {
+	display: block;
+	width: 150px;
+	margin: auto;
+}
+
+#panier {
+	position: relative;
+	float: right;
+	margin-top: 20px;
+	width: 29%;
+}
+
+.clear {
+	clear: both;
+	display: none;
+}

@@ -1,10 +1,8 @@
 <?php
 session_start();
 include './functions.php';
-$_SESSION['id_members'] = 0;
 $aData = getData();
 isAdmin( $aData['members'] );
-
 $p = (!isset($_GET['p'])) ? 'product' : $_GET['p'];
 include './layout/admin_header.php';
 

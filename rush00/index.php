@@ -1,14 +1,14 @@
 <?php
-// ini_set('error_reporting', E_ALL);
-// ini_set('display_errors', TRUE);
+session_start();
+include './functions.php';
+$aData = getData();
 
+$p = (!isset($_GET['p'])) ? 'index' : $_GET['p'];
+$aPage['index'] = './pages/index.php';
+if (!isset($aPage[$p]))
+	$p = 'index' ;
 
-// session_start();
-// include './functions.php';
-//
-// $aData = getData();
-// if (auth($aData['members'], "admin", "admin") > -1)
-// 	echo "Vous etes connecté\n";
-// else
-// 	echo "non connecté\n";
-//  ?>
+include './layout/vitrine_header.php';
+include $aPage[$p];
+include './layout/vitrine_footer.php';
+?>

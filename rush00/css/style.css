@@ -109,6 +109,13 @@ background-color:#777;border-color:#777;color:#eee
 	box-shadow: 1px 5px 1px rgba(255, 255, 255, 0.15) inset, 0 1px 5px rgba(0, 0, 0, 0.075);
 }
 
+.product {
+	background-image: linear-gradient(to bottom, #fff 0px, #f8f8f8 100%);
+	background-repeat: repeat-x;
+	border-radius: 7px;
+	box-shadow: 1px 5px 1px rgba(255, 255, 255, 0.15) inset, 0 1px 5px rgba(0, 0, 0, 0.075);
+}
+
 
 .table
 {

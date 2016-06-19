@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>Administration</title>
+		<title><?= $aData['settings']['site_title'] ?></title>
 		<link rel="stylesheet" type="text/css" href="./css/style.css">
 		<link rel="stylesheet" type="text/css" href="./css/default.css">
 	</head>
@@ -10,9 +10,11 @@
 			<div class="nav-bar">
 				<a class="btn btn-s btn-black" href="./index.php">🏠 <?= $aData['settings']['site_title']; ?></a>
 				<ul class="nav-menu">
-					<li><a class="btn btn-s btn-grey <?php btnactive( $p, 'member', 'btn-grey') ?>" href="./admin.php?p=member">👬 Membres</a></li>
-					<li><a class="btn btn-s btn-grey <?php btnactive( $p, 'product', 'btn-grey') ?>" href="./admin.php?p=product">👜 Produits</a></li>
-					<li><a class="btn btn-s btn-grey <?php btnactive( $p, 'category', 'btn-grey') ?>" href="./admin.php?p=category">📖 Catégorie</a></li>
+					<?php
+						if (isset($aData['members'][($_SESSION['id_members'])]) && $aData['members'][($_SESSION['id_members'])]['admin'] == 1)
+							echo '<li><a class="btn btn-s btn-grey" href="./admin.php">📖 Administration</a></li>';
+					?>
+					<li><a class="btn btn-s btn-grey <?php btnactive( $p, 'index', 'btn-grey') ?>" href="./index.php">🎁 Produit</a></li>
 				</ul>
 			</div>
 		</div>
