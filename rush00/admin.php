@@ -14,6 +14,8 @@ $aPage['member'] = './admin/member.php';
 $aPage['member_new'] = './admin/member_new.php';
 $aPage['member_mod'] = './admin/member_mod.php';
 $aPage['category'] = './admin/category.php';
+$aPage['panier'] = './admin/panier.php';
+$aPage['panier_view'] = './admin/panier_view.php';
 if (!isset($aPage[$p]))
 	redirect("admin_bad_page");
 include $aPage[$p];
