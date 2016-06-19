@@ -1,6 +1,8 @@
 <?php
 function addProduct($aData, $aNewProduct)
 {
+	if (!isset($aNewProduct['cat']))
+		$aNewProduct['cat'] = array();
 	$aData['product'][] = $aNewProduct;
 	saveData($aData);
 	return $aData;
