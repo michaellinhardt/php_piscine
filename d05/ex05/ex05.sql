@@ -1,1 +1,1 @@
-DELETE FROM `mlinhard`.`ft_table` WHERE id > 0 LIMIT 5;
+DELETE FROM `ft_table` WHERE id > 0 LIMIT 5;
