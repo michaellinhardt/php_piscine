@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>jQuery - calc</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script>
+			$( document ).ready(function() {
+				setTimeout(useMe, 30000);
+				initClick();
+			});
+
+			function show(text) {
+				console.log(text);
+				alert(text);
+			}
+
+			function useMe(){
+				alert("Please, use me...");
+				setTimeout(useMe, 30000);
+			}
+
+			function initClick() {
+				$('#try_me').click(function(){
+					iLeft = parseInt($('#left_number').val());
+					iRight = parseInt($('#right_number').val());
+					cOp = $('#operator').val();
+					iResult = eval(iLeft + cOp + iRight);
+					if ((cOp === '%' || cOp === '/') && iRight == 0)
+						show("It's over 9000!");
+					else if (iLeft < 0 || isNaN(iLeft) || iRight < 0 || isNaN(iRight) || isNaN(iResult))
+						show("Error :(");
+					else
+						show(iResult);
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<input id="left_number" />
+		<select id="operator">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+		<input id="right_number" />
+		<input id="try_me" type="submit" value="Try me!"/>
+	</body>
+</html>

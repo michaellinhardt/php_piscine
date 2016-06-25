@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>Javascript</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="./todo.js"></script>
+		<style type="text/css">
+			BODY {
+				margin: 20px;
+				padding: 0;
+			}
+			.btn {
+				border-style:solid;
+				border-radius:.3em;
+				border-width:1px;
+				color:#111;
+				display:inline-block;
+				font-family:helvetica,arial,sans-serif;
+				letter-spacing:.25em;
+				margin-bottom:.5em;
+				padding:1em .75em;
+				text-decoration:none;
+				text-transform:uppercase;
+				-webkit-transition:color .4s,background-color .4s,border .4s;
+				transition:color .4s,background-color .4s,border .4s;
+				font-size:12px;
+				color:#fff;
+				background-color:#000;
+			}
+			.btn:hover, .btn:focus{color:#fff;background-color:#777;border-color:#777;cursor: grab;}
+			.content {
+				display: block;
+				padding: 10px;
+				margin: 20px auto 0px -10px;
+				width: 100%;
+				line-height: 40px;
+				height: 40px;
+				font-weight: bold;
+				letter-spacing: .8em;
+				background-image: linear-gradient(to bottom, #00E 10px, #002 100%);
+				background-repeat: repeat-x;
+				border-radius: 7px;
+				box-shadow: 1px 5px 1px rgba(255, 255, 255, 0.15) inset, 0 1px 5px rgba(0, 0, 0, 0.075);
+			}
+			.content2 {
+				display: block;
+				padding: 10px;
+				margin: 8px auto 0px auto;
+				width: 80%;
+				line-height: 40px;
+				font-weight: bold;
+				letter-spacing: .4em;
+				background-image: linear-gradient(to bottom, #fff 10px, #aaa 100%);
+				background-repeat: repeat-x;
+				border-radius: 7px;
+				box-shadow: 1px 5px 1px rgba(255, 255, 255, 0.15) inset, 0 1px 5px rgba(0, 0, 0, 0.075);
+				text-align: center;
+			}
+			.content2:hover { cursor: crosshair; }
+			#clone_todo { display: none; }
+		</style>
+	</head>
+	<body>
+		<div class="content"><button id="btn_new" class="btn btn-s btn">New</button></div>
+		<div id="todo_list">
+			<div id="clone_todo" class="content2">Je suis le patient zéro !!</div>
+		</div>
+	</body>
+</html>

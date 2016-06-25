@@ -1,0 +1,50 @@
+<html>
+  <head>
+	<title>Javascript - calc</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<script>
+	function useMe() {
+		alert("Please, use me...");
+		setTimeout(useMe, 30000);
+	}
+
+	window.onload = function() {
+		var leftNumber = document.getElementById("left_number");
+		var operator = document.getElementById("operator");
+		var rightNumber = document.getElementById("right_number");
+		var tryMe = document.getElementById("try_me");
+		setTimeout(useMe, 30000);
+
+		var show = function(text) {
+			console.log(text);
+			alert(text);
+		}
+
+		tryMe.addEventListener("click", function() {
+			iLeft = parseInt(leftNumber.value);
+			cOp = operator.value;
+			iRight = parseInt(rightNumber.value);
+			iResult = eval(iRight + cOp + iLeft);
+			if ((cOp === '%' || cOp === '/') && iRight == 0)
+				show("It's over 9000!");
+			else if (iLeft < 0 || isNaN(iLeft) || iRight < 0 || isNaN(iRight) || isNaN(iResult))
+				show("Error :(");
+			else
+				show(iResult);
+		});
+	};
+	</script>
+  </head>
+  <body>
+	<input id="left_number" />
+	<select id="operator">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+		<option value="%">%</option>
+	</select>
+	<input id="right_number" />
+	<input id="try_me" type="submit" value="Try me!"/>
+  </body>
+</html>
